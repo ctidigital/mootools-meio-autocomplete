@@ -295,6 +295,8 @@ provides: [Meio.Autocomplete]
 				this.onUpdate = null;
 			}
 			var list = this.elements.list;
+			// Reposition the list as the page may have been altered
+			list.positionNextTo(this.elements.field.node);
 			if (list.list.get('html')){
 				if (this.active) list.show();
 			} else {
